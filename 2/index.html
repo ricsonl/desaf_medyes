@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main d-flex justify-content-center align-items-center">
+
+            <h3>Tabela de funcionários</h3>
+
+            <table class="table table-bordered" id="tabela_func">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Salário</th>
+                        <th>Área</th>
+                    </tr>
+                </thead>
+                <tbody v-for="func in funcionarios">
+                    <tr>
+                        <td>{{ func.id }}</td>
+                        <th>{{ func.nome }} {{ func.sobrenome }}</th>
+                        <td>R$ {{ func.salario }}</td>
+                        <td>{{ areas.filter(a => a.codigo == func.area)[0].nome }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/tabela_func.js"></script>
+</body>
+
+</html>
