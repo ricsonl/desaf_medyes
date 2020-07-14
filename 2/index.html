@@ -13,33 +13,57 @@
 
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <side-menu></side-menu>
+            </div>
+            <div class="col-lg-10">
+                <my-header></my-header>
+                <page-content></page-content>
+            </div>
+        </div>
+    </div>
 
-        <div class="main d-flex justify-content-center align-items-center" id="main">
+    <template id="menu">
+        <div class="menu">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </template>
 
+    <template id="header">
+        <div class="header">
+            <header>a</header>
+        </div>
+    </template>
+
+    <template id="content">
+        <div class="content">
             <h3>Tabela de funcionários</h3>
 
-            <table class="table table-bordered" id="tabela_func">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
-                        <th>Salário</th>
                         <th>Área</th>
+                        <!--<th>Salário</th>-->
                     </tr>
                 </thead>
                 <tbody v-for="func in funcionarios">
                     <tr>
                         <td>{{ func.id }}</td>
                         <th>{{ func.nome }} {{ func.sobrenome }}</th>
-                        <td>R$ {{ func.salario }}</td>
                         <td>{{ areas.filter(a => a.codigo == func.area)[0].nome }}</td>
+                        <!--<td>R$ {{ func.salario }}</td>-->
                     </tr>
                 </tbody>
             </table>
-
         </div>
-
-    </div>
+    </template>
+    
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 
