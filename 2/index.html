@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
@@ -14,10 +15,10 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-sm-2">
                 <side-menu></side-menu>
             </div>
-            <div class="col-lg-10">
+            <div class="col-sm-10">
                 <my-header></my-header>
                 <page-content></page-content>
             </div>
@@ -26,25 +27,32 @@
 
     <template id="menu">
         <div class="menu">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="#" class="home">My App</a>
+            <a href="#" class="menu-item"><i class="fa fa-list-alt"></i> &nbsp Dashboard</a>
+            <a href="#" class="menu-item"><i class="fa fa-link"></i> &nbsp Shortcuts</a>
+            <a href="#" class="menu-item"><i class="fa fa-th-large"></i> &nbsp Overview</a>
+            <a href="#" class="menu-item"><i class="fa fa-calendar-o"></i> &nbsp Events</a>
+            <a href="#" class="menu-item"><i class="fa fa-info-circle"></i> &nbsp About</a>
+            <a href="#" class="menu-item"><i class="fa fa-gear"></i> &nbsp Services</a>
+            <a href="#" class="menu-item"><i class="fa fa-comment-o"></i> &nbsp Contact</a>
         </div>
     </template>
 
     <template id="header">
         <div class="header">
-            <header>a</header>
+            <header class="header">
+                <a><i class="fa fa-bell" style="color:darkred;"></i></a>
+                <a href="#" class="headerlink">Test User</a>
+            </header>
         </div>
     </template>
 
     <template id="content">
         <div class="content">
-            <h3>Tabela de funcionários</h3>
+            <h3 class="title">Tabela de funcionários</h3>
 
-            <table class="table table-bordered">
-                <thead>
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
@@ -55,7 +63,7 @@
                 <tbody v-for="func in funcionarios">
                     <tr>
                         <td>{{ func.id }}</td>
-                        <th>{{ func.nome }} {{ func.sobrenome }}</th>
+                        <td>{{ func.nome }} {{ func.sobrenome }}</td>
                         <td>{{ areas.filter(a => a.codigo == func.area)[0].nome }}</td>
                         <!--<td>R$ {{ func.salario }}</td>-->
                     </tr>
