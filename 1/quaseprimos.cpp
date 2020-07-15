@@ -8,9 +8,9 @@ int main(){
     std::cin >> k;
 
     if(quasePrimo(k))
-        std::cout << 'S';
+        std::cout << 'S\n';
     else
-        std::cout << 'N';
+        std::cout << 'N\n';
 
     return 0;
 }
