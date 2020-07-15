@@ -20,7 +20,7 @@
 3. Abrir o arquivo "index.html" em um navegador
 
 <p align="center">
-  <img src="" /> <br>
+  <img src="https://github.com/ricsonl/desaf_medyes/blob/master/2/Screenshot%20from%202020-07-14%2016-10-52.png" width="75%" /> <br>
 </p>
 
 ## Questão 3
