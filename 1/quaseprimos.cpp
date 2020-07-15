@@ -10,7 +10,7 @@ int main(){
     if(quasePrimo(k))
         std::cout << "S\n";
     else
-        std::cout << "N\n";
+        std::cout << "N\n"; 
 
     return 0;
 }
