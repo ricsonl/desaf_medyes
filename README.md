@@ -32,9 +32,7 @@
 1. `npm install` para instalar as dependências
 2. `npm run knex:migrate` para criar o banco
 3. `npm run sv` para iniciar o servidor
-4.  utilizar um _REST API Client_ para testar as requisições
-
-#### Rotas:
-* **Cadastro de usuário:** _POST_ localhost:3333/users
-* **Listagem de usuários:** _GET_ localhost:3333/users
-* **Busca de usuário por id:** _GET_ localhost:3333/users/<id>
+4.  utilizar um _REST API Client_ para testar as requisições  
+  4.1 Cadastro de usuário: _POST_ localhost:3333/users  
+  4.2 Listagem de usuários: _GET_ localhost:3333/users  
+  4.3 Busca de usuário por id: _GET_ localhost:3333/users/<id>
