@@ -14,6 +14,7 @@ routes.post('/users', async (req, res) => { // CADASTRO DE USUARIO
 
     if(inserted.length == 0){ // caso o usuario nao tenha sido inserido
         res.status(500).json({ message: 'Erro: falha no cadastro do usuario' });
+        return;
     }
 
     res.json({ // retorna o id do usuario inserido
@@ -37,6 +38,7 @@ routes.get('/users/:id', async (req, res) => { // BUSCA DE USUARIO POR ID
 
     if (!_user){ // caso a busca retorne nulo
         res.status(404).json({ message: 'Usuario nao encontrado'});
+        return;
     }
     
     res.json({ // retorna nome e sobrenome do usuario
