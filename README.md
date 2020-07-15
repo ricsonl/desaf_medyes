@@ -19,6 +19,10 @@
 1. Criar um servidor local com uma cópia do diretório "2"
 3. Abrir o arquivo "index.html" em um navegador
 
+<p align="center">
+  <img src="" /> <br>
+</p>
+
 ## Questão 3
 
 #### Tecnologias utilizadas: 
