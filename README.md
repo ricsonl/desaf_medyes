@@ -39,4 +39,4 @@
 4.  utilizar um _REST API Client_ para testar as requisições  
   * Cadastro de usuário: _POST_ localhost:3333/users  
   * Listagem de usuários: _GET_ localhost:3333/users  
-  * Busca de usuário por id: _GET_ localhost:3333/users/<id>
+  * Busca de usuário por id: _GET_ localhost:3333/users/id
